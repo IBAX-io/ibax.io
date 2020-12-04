@@ -1,4 +1,4 @@
-# IBAX-official
+# ibax.io
 
 ## Build Setup
 
