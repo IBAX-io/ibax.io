@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-18 10:39:20
  * @LastEditors: abc
- * @LastEditTime: 2021-01-15 16:25:08
+ * @LastEditTime: 2021-01-16 11:48:17
  * @Description: open Source
 -->
 <template>
@@ -87,6 +87,7 @@
                       <div class="open-warp">
                         <h6 class="open-h6">
                           <span>SHA256</span>
+                          <!-- <span>&</span> -->
                         </h6>
                         <p class="open-text">
                           {{ $t("declaration.generation") }}

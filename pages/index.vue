@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-15 16:29:27
  * @LastEditors: abc
- * @LastEditTime: 2021-01-11 18:15:09
+ * @LastEditTime: 2021-01-16 11:50:40
  * @Description: home web
 -->
 <template>
@@ -214,6 +214,7 @@
                 <p>{{ $t("declaration.simple") }}</p>
                 <p>{{ $t("declaration.consensus") }}</p>
                 <p>{{ $t("declaration.sharing") }}</p>
+                <p>{{ $t("declaration.platform") }}</p>
               </div>
             </a-col>
             <a-col :md="12" :xs="22">
