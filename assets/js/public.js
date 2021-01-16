@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description:
  * @Date: 2019-04-10 14:49:19
- * @LastEditTime: 2020-10-16 17:38:23
+ * @LastEditTime: 2020-12-20 22:56:24
  */
 import Cookie from "js-cookie";
 // translate router.meta.title, be used in breadcrumb sidebar tagsview
@@ -195,7 +195,7 @@ export function handleHundred() {
   const numbersArray = [];
   const max = 100;
   for (let i = 1; numbersArray.push(i++) < max; );
-  console.log(numbersArray);
+  // console.log(numbersArray);
   return numbersArray;
 }
 /**
@@ -207,7 +207,7 @@ export function handleHundred() {
  */
 export function handleGetCaption(str, strPart) {
   const index = str.lastIndexOf(strPart);
-  console.log(index);
+  // console.log(index);
   const cutStr = str.substring(index + strPart.length, str.length);
   return cutStr;
 }

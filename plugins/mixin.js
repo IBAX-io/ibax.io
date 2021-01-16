@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2020-10-16 16:52:31
+ * @LastEditTime: 2020-12-20 22:55:46
  */
 
 import Vue from "vue";
@@ -31,14 +31,14 @@ Vue.mixin({
     },
     $analysis(str, dataArr) {
       const arr = str.match(/\[(.*?)\]/g);
-      console.log(arr);
+      // console.log(arr);
       const width = "25";
       const height = "25";
       if (arr) {
         for (let i = 0; i < arr.length; i++) {
           for (const j in dataArr) {
             if (arr[i] === dataArr[j].phrase) {
-              console.log(dataArr[j].phrase);
+              // console.log(dataArr[j].phrase);
               const ex =
                 '<img width="' +
                 width +
@@ -106,7 +106,7 @@ Vue.mixin({
        og:videosrc Flas 
        og:audiosrc  */
     $seo(title, type, content, keyWord, author, robots, payload = []) {
-      console.log(robots);
+      // console.log(robots);
       return {
         title,
         meta: [
@@ -174,7 +174,7 @@ Vue.mixin({
       return temp.textContent || temp.textContent;
     }
     /* $mixinGetSass(filename) {
-      console.log(filename);
+     // console.log(filename);
       return require(`../assets/sass/${filename}/variables.scss`);
     } */
   }

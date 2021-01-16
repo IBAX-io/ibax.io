@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-25 12:08:59
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 14:58:35
+ * @LastEditTime: 2021-01-11 18:08:19
  * @Description: 
 -->
 <template>
@@ -15,11 +15,9 @@
             <p class="dynamic-text">{{ $t("declaration.collision") }}</p>
             <p class="dynamic-text">{{ $t("declaration.please") }}</p>
             <a-row type="flex" justify="center">
-              <a-button>
-                <nuxt-link :to="{ name: 'openSource' }">
-                  Our Technologies >>
-                </nuxt-link>
-              </a-button>
+              <nuxt-link :to="{ name: 'openSource' }" class="link-a-white">
+                Our Technologies >>
+              </nuxt-link>
             </a-row>
           </a-col>
         </a-col>
@@ -34,9 +32,6 @@
             <div class="dynamic-first">
               <p class="dynamic-text">{{ $t("ecosystem") }}</p>
             </div>
-            <!-- <p class="dynamic-btn">
-              <a-button>If you want to get ibxc, learn about it </a-button>
-            </p> -->
           </div>
           <div class="dynamic-warp">
             <h4 class="dynamic-h4">Open Source Testing Bounty</h4>
@@ -45,18 +40,12 @@
                 {{ $t("declaration.attach") }}
               </p>
             </div>
-            <!--  <p class="dynamic-btn">
-              <a-button>View event details </a-button>
-            </p> -->
           </div>
           <div class="dynamic-warp">
             <h4 class="dynamic-h4">Ecosystem Summit</h4>
             <p class="dynamic-text dynamic-first">
               {{ $t("declaration.give") }}
             </p>
-            <!--  <p class="dynamic-btn">
-              <a-button>Entering the summit</a-button>
-            </p> -->
           </div>
           <p class="dynamic-btn">
             <a-button>Email：support@ibax.io</a-button>
@@ -69,13 +58,13 @@
               <img src="../assets/image/one-1.png" alt="one-1" />
             </div>
             <div class="dynamic-box-right">
-              <p class="dynamic-text">{{ $t("declaration.ibaa") }}</p>
+              <p class="dynamic-text">{{ $t("declaration.won") }}</p>
               <p class="dynamic-text dynamic-box-date dynamic-12">2020-3-21</p>
             </div>
           </div>
           <div class="dynamic-box-two">
             <div class="dynamic-box-content">
-              <p class="dynamic-text">{{ $t("declaration.ibaa") }}</p>
+              <p class="dynamic-text">{{ $t("declaration.won") }}</p>
               <p class="dynamic-text dynamic-box-content-middle dynamic-12">
                 2020-3-21
               </p>
@@ -94,7 +83,7 @@
           </div>
           <div class="dynamic-box-three">
             <div class="dynamic-box-three-left">
-              <p class="dynamic-text">{{ $t("declaration.ibaa") }}</p>
+              <p class="dynamic-text">{{ $t("declaration.won") }}</p>
               <p class="dynamic-text dynamic-12">
                 {{ $t("declaration.ipsum") }}
               </p>
@@ -128,12 +117,6 @@ export default {
   watch: {},
   created() {},
   mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
     this.$nextTick(() => {
       this.$nuxt.$loading.finish();
     });
@@ -141,12 +124,17 @@ export default {
   methods: {},
   head() {
     return {
-      title: "IBAX-Information",
+      title: "Information | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-Information"
+          content: "You can learn more about IBAX network, Please stay tuned."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "You can learn more about IBAX network, Please stay tuned."
         }
       ]
     };

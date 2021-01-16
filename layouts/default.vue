@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-15 16:29:27
  * @LastEditors: abc
- * @LastEditTime: 2020-11-24 18:38:31
+ * @LastEditTime: 2020-12-20 22:53:47
  * @Description: 
 -->
 <template>
@@ -55,12 +55,18 @@
 </template>
 <script>
 // import zhCN from "ant-design-vue/lib/locale-provider/zh_CN";
+import PublicHeader from "../components/common/PublicHeader";
+import PublicFooter from "../components/common/PublicFooter";
 import { handleGetLang } from "~/assets/js/public";
 if (process.client) {
   // eslint-disable-next-line no-var
   var { WOW } = require("wowjs");
 }
 export default {
+  components: {
+    PublicHeader,
+    PublicFooter
+  },
   data() {
     return {
       locale: null,

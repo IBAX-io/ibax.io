@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-10-10 14:35:51
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:50:51
+ * @LastEditTime: 2021-01-15 17:10:43
  * @Description: footer
 -->
 <template>
@@ -16,11 +16,17 @@
         <a-col :md="3" :xs="23">
           <h5 class="footer-link">INTRODUCTION</h5>
           <a
+            href="https://ibax.io/IBAX_Public_Network_Whitepaper_V_1_0.pdf"
+            target="_blank"
+            class="footer-href"
+            >White Paper
+          </a>
+          <!-- <a
             href="https://ibax.io/IBAX%20Public%20Network%20Whitepaper%20V1.0.pdf"
             target="_blank"
             class="footer-href"
-            >White Paper</a
-          >
+            >White Paper
+          </a> -->
         </a-col>
         <a-col :md="5" :xs="23">
           <h5 class="footer-link">RESEARCH</h5>
@@ -60,11 +66,17 @@
         </a-col>
         <a-col :md="5" :xs="23">
           <h5 class="footer-link">OPEN SOURCE</h5>
-          <a href="https://ibax.gitbook.io" target="_blank" class="footer-href"
+          <a
+            href="https://ibax.gitbook.io/docs/"
+            target="_blank"
+            class="footer-href"
             >Open Documentation</a
           >
-          <a href="https://ibax.gitbook.io" target="_blank" class="footer-href"
-            >Open source</a
+          <a
+            href="https://github.com/ibax-io"
+            target="_blank"
+            class="footer-href"
+            >Open Source</a
           >
         </a-col>
         <a-col :md="6" :xs="23">
@@ -101,7 +113,7 @@ export default {
         {
           value: "facebook",
           img: facebook,
-          href: "https://www.facebook.com/ibaxproject/"
+          href: "https://www.facebook.com/IBAXNetwork/"
         },
         {
           value: "twitter",
@@ -129,7 +141,7 @@ export default {
   methods: {
     isDevice() {
       if (process.client) {
-        console.log("+++");
+        //  console.log("+++");
         const userAgent = navigator.userAgent;
         const Agents = [
           "Android",
@@ -139,7 +151,7 @@ export default {
           "iPad",
           "iPod"
         ];
-        console.log("userAgent:", userAgent);
+        // console.log("userAgent:", userAgent);
         return Agents.some((i) => {
           return userAgent.includes(i);
         });
@@ -151,12 +163,12 @@ export default {
       const toOpen = function (url) {
         let option =
           "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350";
-        console.log(that.isDevice());
+        // console.log(that.isDevice());
         option = that.isDevice() ? option : "";
         window.open(url, "_blank", option);
       };
       const href = encodeURIComponent(document.location.href);
-      console.log(href);
+      // console.log(href);
       const title = encodeURIComponent(document.title);
       switch (type) {
         case "facebook": // Faceboo

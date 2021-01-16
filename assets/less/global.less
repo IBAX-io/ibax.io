@@ -238,6 +238,25 @@ body,
       display: inline-block;
     }
   }
+  .link-a-none {
+    border: 1px solid @primary-color;
+    padding: 5px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    &:hover {
+      background-color: @primary-color;
+      color: @text-white;
+    }
+  }
+  .link-a-white {
+    border: 1px solid @primary-color;
+    background-color: @text-white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    &:hover {
+      color: @primary-color;
+    }
+  }
 }
 .computer {
   display: flex;

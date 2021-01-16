@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-17 10:28:12
  * @LastEditors: abc
- * @LastEditTime: 2020-12-04 10:02:23
+ * @LastEditTime: 2020-12-20 22:55:09
  * @Description: header nav 
 -->
 <template>
@@ -133,7 +133,7 @@ export default {
       return label;
     },
     handleLangSwitch(val) {
-      console.log(val);
+      //  console.log(val);
       // stor
       this.$store.commit("SET_LANG", val);
       this.label = this.handleLabel(this.objLang, val);
@@ -142,7 +142,7 @@ export default {
       const objData = {
         lang: val
       };
-      console.log(objData);
+      // console.log(objData);
       handleSaveCookie("lang", objData, 7);
     }
   }

@@ -1,18 +1,20 @@
+/* eslint-disable no-var */
 /*
  * @Description: requestNextAnimationFrame
  * @Author: your name
  * @LastEditors: abc
  * @Date: 2019-04-13 11:12:31
- * @LastEditTime: 2020-11-26 18:03:40
+ * @LastEditTime: 2020-12-21 10:20:24
  */
 
 window.requestNextAnimationFrame = (function () {
-  let originalWebkitRequestAnimationFrame;
-  let wrapper;
-  let geckoVersion = 0;
-  const userAgent = navigator.userAgent;
-  let index = 0;
-  const self = this;
+  // eslint-disable-next-line no-var
+  var originalWebkitRequestAnimationFrame;
+  var wrapper;
+  var geckoVersion = 0;
+  var userAgent = navigator.userAgent;
+  var index = 0;
+  var self = this;
 
   // Workaround for Chrome 10 bug where Chrome
   // does not pass the time to the animation function
@@ -69,7 +71,7 @@ window.requestNextAnimationFrame = (function () {
     window.oRequestAnimationFrame ||
     window.msRequestAnimationFrame ||
     function (callback, element) {
-      let start, finish;
+      var start, finish;
 
       window.setTimeout(function () {
         start = +new Date();

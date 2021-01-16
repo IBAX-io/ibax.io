@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-18 10:35:25
  * @LastEditors: abc
- * @LastEditTime: 2020-11-26 00:46:11
+ * @LastEditTime: 2020-12-18 09:48:54
  * @Description: 
 -->
 <template>
@@ -110,12 +110,6 @@ export default {
   watch: {},
   created() {},
   mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
     this.$nextTick(() => {
       this.$nuxt.$loading.finish();
     });
@@ -123,12 +117,19 @@ export default {
   methods: {},
   head() {
     return {
-      title: "IBAX-Research Center",
+      title: "Research Center | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-Research Center"
+          content:
+            "The technical difficulties that the IBAX team is studying  would bring great changes to the IBAX network."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "The technical difficulties that the IBAX team is studying  would bring great changes to the IBAX network."
         }
       ]
     };

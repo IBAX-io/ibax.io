@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-15 16:29:27
  * @LastEditors: abc
- * @LastEditTime: 2020-11-26 17:36:24
+ * @LastEditTime: 2020-12-18 14:58:51
  * @Description:
  */
 import Vue from "vue";
@@ -20,7 +20,6 @@ import {
   Tabs,
   Pagination
 } from "ant-design-vue";
-
 Vue.use(ConfigProvider); //
 Vue.use(Layout); //
 Vue.use(Icon); //

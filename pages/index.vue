@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-15 16:29:27
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:50:31
+ * @LastEditTime: 2021-01-11 18:15:09
  * @Description: home web
 -->
 <template>
@@ -42,17 +42,22 @@
             <p
               class="content-text"
               style="background: rgba(255, 255, 255, 0.8)"
-            >
-              {{ $t("declaration.four") }}
-            </p>
+              v-html="$t('declaration.four')"
+            ></p>
             <div class="content-btn">
-              <a-button
-                ><a
+              <a
+                href="https://ibax.io/IBAX_Public_Network_Whitepaper_V_1_0.pdf"
+                target="_blank"
+                class="link-a-none"
+              >
+                {{ $t("learnMor") }}
+              </a>
+              <!--  <a
                   href="https://ibax.io/IBAX%20Public%20Network%20Whitepaper%20V1.0.pdf"
                   target="_blank"
-                  >{{ $t("learnMor") }}</a
-                ></a-button
-              >
+                >
+                  {{ $t("learnMor") }}
+                </a> -->
             </div>
           </a-col>
         </a-row>
@@ -170,11 +175,9 @@
                 <p class="content-text">{{ $t("declaration.world") }}</p>
                 <p class="content-text">{{ $t("declaration.explore") }}</p>
                 <div class="content-challenge">
-                  <a-button>
-                    <nuxt-link :to="{ name: 'openSource' }">
-                      {{ $t("challenge") }}
-                    </nuxt-link></a-button
-                  >
+                  <nuxt-link :to="{ name: 'openSource' }" class="link-a-none">
+                    {{ $t("challenge") }}
+                  </nuxt-link>
                 </div>
               </a-col>
               <a-col :md="12" :xs="22">
@@ -309,12 +312,7 @@ export default {
     };
   },
   mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
+    console.log(this.$metaInfo.title);
     this.handleLoading();
     this.handlePullDown();
     this.$nextTick(() => {
@@ -339,18 +337,25 @@ export default {
       }
     },
     onPanelChange(value, mode) {
-      console.log(value, mode);
+      // console.log(value, mode);
     },
     change() {}
   },
   head() {
     return {
-      title: "IBAX",
+      title: "IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX"
+          content:
+            "IBAX is a blockchain infrastructural Network. It is running on our own chain and has Cross-chain solutions. IBAX is concentrated on solving problems that exist on Ethereum. We encourage developers to build their applications and establish a sustainable ecosystem."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "IBAX is a blockchain infrastructural Network. It is running on our own chain and has Cross-chain solutions. IBAX is concentrated on solving problems that exist on Ethereum. We encourage developers to build their applications and establish a sustainable ecosystem."
         }
       ]
     };

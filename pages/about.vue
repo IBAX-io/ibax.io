@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-16 15:19:11
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 14:58:43
+ * @LastEditTime: 2021-01-11 18:03:54
  * @Description: 
 -->
 <template>
@@ -141,15 +141,13 @@
             </div>
           </div>
           <p class="about-btn">
-            <a-button>
-              <a
-                href=" https://www.linkedin.com/company/ibaxio/"
-                target="_blank"
-                class="footer-href"
-              >
-                Find more positions on our LinkedIn</a
-              >
-            </a-button>
+            <a
+              href=" https://www.linkedin.com/company/ibaxio/"
+              target="_blank"
+              class="link-a-none"
+            >
+              Find more positions on our LinkedIn</a
+            >
           </p>
         </a-col>
       </a-row>
@@ -180,7 +178,7 @@
       </a-row>
     </div>
     <!-- about four -->
-    <a-row type="flex" justify="center">
+    <a-row type="flex" justify="center" style="display: none">
       <a-col :md="15" :xs="23">
         <div class="about-four">
           <div class="about-four-left">Email：support@ibax.io</div>
@@ -189,7 +187,7 @@
               You can follow us or get in touch with us through these ways
             </p>
             <div class="about-four-right-btn">
-              <a href="https://www.facebook.com/ibaxproject/" target="_blank">
+              <a href="https://www.facebook.com/IBAXNetwork/" target="_blank">
                 <a-button>
                   <span class="about-four-right-facebook"></span>Facebook
                 </a-button>
@@ -200,7 +198,7 @@
                 </a-button>
               </a>
               <a
-                href="https://www.linkedin.com/company/ibaxio/"
+                href="https://www.youtube.com/channel/UC-oneUwzz01xaCkFTTyR0QQ?view_as=subscribe"
                 target="_blank"
               >
                 <a-button>
@@ -213,7 +211,7 @@
         </div>
       </a-col>
     </a-row>
-    <div class="about-five">
+    <div class="about-five" style="display: none">
       <a-row type="flex" justify="center">
         <a-col :md="15" :xs="23">
           <h2 class="about-five-title">Our Story</h2>
@@ -292,12 +290,6 @@ export default {
   watch: {},
   created() {},
   mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
     this.$nextTick(() => {
       this.$nuxt.$loading.finish();
     });
@@ -305,12 +297,17 @@ export default {
   methods: {},
   head() {
     return {
-      title: "IBAX-About Us",
+      title: "About Us | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-About Us"
+          content: "Welcome to join us and Let's grow together."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "Welcome to join us and Let's grow together."
         }
       ]
     };

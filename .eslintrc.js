@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-15 16:29:27
  * @LastEditors: abc
- * @LastEditTime: 2020-09-16 14:29:53
+ * @LastEditTime: 2021-01-11 18:15:34
  * @Description:eslin
  */
 module.exports = {
@@ -25,6 +25,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "vue/no-v-html": 0
   }
 };

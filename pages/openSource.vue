@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-18 10:39:20
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:19:42
+ * @LastEditTime: 2021-01-15 16:25:08
  * @Description: open Source
 -->
 <template>
@@ -37,14 +37,13 @@
             </a-col>
           </a-row>
           <a-row type="flex" justify="center">
-            <a-button class="open-use">
-              <a
-                href="https://github.com/ibax-io"
-                target="_blank"
-                class="footer-href"
-                >Use IBAX</a
-              >
-            </a-button>
+            <a
+              style="margin-top: 20px"
+              href="https://github.com/ibax-io"
+              target="_blank"
+              class="link-a-white"
+              >Use IBAX</a
+            >
           </a-row>
         </a-col>
       </a-row>
@@ -118,8 +117,9 @@
               <a-row type="flex" justify="center">
                 <div class="open-warp-broder">
                   <h6 class="open-h6">
-                    {{ $t("location") }}
+                    {{ $t("configuration") }}
                   </h6>
+                  <p class="open-text">*{{ $t("location") }}</p>
                   <p class="open-text">
                     {{ $t("parameter") }}
                   </p>
@@ -205,14 +205,13 @@
                       />
                     </div>
                     <div class="open-block-btn">
-                      <a-button>
-                        <a
-                          href="https://weaver.ibax.io"
-                          target="_blank"
-                          class="footer-href"
-                          >Enter Weaver>></a
-                        >
-                      </a-button>
+                      <a
+                        style="margin-top: 20px"
+                        href="https://weaver.ibax.io"
+                        target="_blank"
+                        class="link-a-none"
+                        >Enter Weaver>></a
+                      >
                     </div>
                   </div>
                 </a-col>
@@ -254,7 +253,7 @@
       <a-row type="flex" justify="center">
         <a-col :md="15" :xs="23">
           <h4 class="content-title">
-            Functions of ICCS
+            Functions of Weaver
             <span class="content-spot">.</span>
           </h4>
           <div class="open-tabs">
@@ -295,7 +294,7 @@
                 <img src="../assets/image/related_one.png" alt="related_one" />
               </div>
               <div class="open-bottom-warp">
-                <img src="../assets/image/related_two.png" alt="related_two" />
+                <img src="../assets/image/eth.jpg" alt="related_two" />
               </div>
               <div class="open-bottom-warp">
                 <img
@@ -401,12 +400,6 @@ export default {
   watch: {},
   created() {},
   mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
     this.$nextTick(() => {
       this.$nuxt.$loading.finish();
     });
@@ -414,12 +407,19 @@ export default {
   methods: {},
   head() {
     return {
-      title: "IBAX-Open Source",
+      title: "Open Source | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-Open Source"
+          content:
+            "IBAX opens up technical code based on the principle of sharing and open. We hope to explore with all communities in blockchain together and seek more innovative technologies."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "IBAX opens up technical code based on the principle of sharing and open. We hope to explore with all communities in blockchain together and seek more innovative technologies."
         }
       ]
     };
