@@ -1,0 +1,190 @@
+.white {
+  background: @text-white;
+}
+.back {
+  color: @text-base;
+  width: 100%;
+  background-size: 100% 100%;
+}
+.title {
+  color: @text-base;
+  font-size: 30px;
+}
+.content {
+  width: 100%;
+  color: @text-white;
+  &-left {
+    margin-top: 0.3rem;
+  }
+  &-title {
+    color: @text-white;
+    font-size: 30px;
+    margin-bottom: 0.2rem;
+  }
+  &-right {
+    width: 60%;
+    margin-top: 0.3rem;
+    img {
+      width: 100%;
+      height: 2.5rem;
+      display: block;
+    }
+  }
+  &-second {
+    text-align: center;
+    background: url("../image/thrid.png") no-repeat center;
+    .back();
+    &-title {
+      margin-top: 0.5rem;
+      .title();
+    }
+  }
+  &-box {
+    background: url("../image/fourth.png") no-repeat center 2rem;
+    background-size: 100% 100%;
+  }
+  &-small {
+    margin-bottom: 0.2rem;
+    h4 {
+      color: @text-white;
+      margin: 0.1rem 0;
+      font-size: 20px;
+    }
+    p {
+      letter-spacing: 1px;
+    }
+    img {
+      margin: 0 0.3rem;
+      width: 25%;
+      height: 25%;
+    }
+    &-six {
+      margin-bottom: 0.5rem;
+
+      p {
+        margin: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &-four {
+    background: url("../image/four.png") no-repeat center;
+    padding-bottom: 30px;
+    .back();
+    &-title {
+      margin-top: 0.3rem;
+      .title();
+    }
+  }
+  &-img {
+    margin-top: 0.5rem;
+    width: 70%;
+    img {
+      width: 100%;
+      display: block;
+      height: 1.5rem;
+    }
+    &-six {
+      width: 80%;
+      img {
+        width: 100%;
+        display: block;
+        height: 2rem;
+      }
+    }
+  }
+  &-btn {
+    margin: 30px 0 80px 0;
+  }
+  .content-challenge {
+    margin-top: 0.1rem;
+    margin-bottom: 0.6rem;
+  }
+  &-spot {
+    color: #ead2b9;
+    display: inline-block;
+    font-size: 50px;
+  }
+  &-five {
+    overflow: hidden;
+    padding-bottom: 0.5rem;
+    background: url("../image/henry.png") no-repeat center;
+    background-size: 100% 100%;
+    h4 {
+      color: @text-base;
+    }
+    p {
+      color: @text-base;
+      line-height: 1.5em;
+    }
+    &-text {
+      margin-bottom: 0.1rem;
+      color: @text-base;
+    }
+    &-box {
+      position: relative;
+      & > img {
+        position: absolute;
+      }
+      &-t {
+        width: 120px;
+        height: 90px;
+        right: 0;
+        top: 75px;
+      }
+      &-s {
+        width: 80px;
+        height: 70px;
+        left: -70px;
+        top: 80px;
+      }
+      &-y {
+        width: 80px;
+        height: 70px;
+        left: 40px;
+        bottom: 0;
+      }
+      &-z {
+        width: 80px;
+        height: 70px;
+        right: 70px;
+        bottom: -50px;
+      }
+    }
+  }
+}
+.video {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  &-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  &-poster {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    background: url("/video/poster.jpg") no-repeat center;
+    background-size: 100% 100%;
+    img {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.open {
+  &-title {
+    text-align: left;
+    margin-bottom: 0.2rem;
+    .title();
+  }
+  &-first {
+    background: url("../image/top2.png") no-repeat center;
+    background-size: 100% 100%;
+    color: @text-white;
+    padding-top: 0.3rem;
+    h4 {
+      color: @text-white;
+      margin-bottom: 0.1rem;
+      margin-top: 0;
+    }
+    .content-text {
+      margin-bottom: 0.2rem;
+    }
+  }
+  &-img {
+    display: flex;
+    align-items: center;
+    img {
+      width: 0.2rem;
+      height: 0.2rem;
+      margin-right: 0.1rem;
+    }
+  }
+  &-span {
+    line-height: 2em;
+  }
+  &-use {
+    margin-top: 0.2rem;
+    padding: 0 0.3rem;
+  }
+  &-part {
+    background: url("../image/thrid.png") no-repeat center;
+    background-size: 100% 100%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    h4 {
+      color: @text-base;
+      margin: 0.3rem 0;
+    }
+  }
+  &-h5 {
+    font-size: 24px;
+    color: @text-size;
+    margin-bottom: 0.1rem;
+  }
+  &-h6 {
+    font-size: 18px;
+    color: @text-size;
+    margin-bottom: 0.1rem;
+    display: flex;
+
+    /*  span:last-child {
+      margin-left: auto;
+    } */
+  }
+  &-text {
+    color: @text-color;
+    margin-bottom: 10px;
+    a {
+      color: @text-link;
+    }
+  }
+  &-warp {
+    width: 90%;
+    background: rgba(255, 255, 255, 0.8);
+    &-broder {
+      width: 90%;
+      border: 1px @text-color dashed;
+      padding: 0.1rem;
+      height: 400px;
+      .open-h6 {
+        font-weight: bolder;
+      }
+    }
+  }
+
+  &-second {
+    background: url("../image/part_thre2.png") no-repeat center 2rem;
+    background-size: 100% 100%;
+  }
+  &-third {
+    background: url("../image/part_thre2.png") no-repeat top;
+    background-size: 100% 70%;
+  }
+  &-green {
+    background: url(../image/fourth.png) no-repeat center 1rem;
+    background-size: 100% 100%;
+  }
+  &-white {
+    background: url(../image/part_four2.png) no-repeat center;
+    background-size: 100% 100%;
+    padding-bottom: 0.3rem;
+    .open-title {
+      color: @text-base;
+      margin: 0.3rem 0;
+    }
+  }
+  &-block {
+    width: 80%;
+    &-img {
+      width: 100%;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .ant-btn {
+      width: 100%;
+      margin-top: 0.2rem;
+    }
+  }
+  &-tabs {
+    width: 100%;
+    .ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active {
+      color: @text-size;
+      background-color: @back-color;
+      border-radius: 5px;
+      padding-right: 60px;
+      width: 250px;
+    }
+    .ant-tabs-nav .ant-tabs-tab {
+      padding-right: 60px;
+    }
+    .ant-tabs-nav .ant-tabs-tab:hover {
+      color: @text-size;
+      background-color: @back-color;
+      border-radius: 5px;
+    }
+    .ant-tabs .ant-tabs-left-bar {
+      border: none;
+      position: absolute;
+      padding: 30px 0;
+    }
+    .ant-tabs .ant-tabs-left-content {
+      border: none;
+      padding-left: 0;
+      margin-left: 220px;
+    }
+    .ant-tabs .ant-tabs-left-bar .ant-tabs-tab {
+      text-align: left;
+    }
+    &-content {
+      background-color: @text-white;
+      padding: 30px 60px;
+      border-radius: 10px;
+      min-height: 350px;
+    }
+    .ant-tabs .ant-tabs-left-bar .ant-tabs-ink-bar {
+      width: 0;
+    }
+    &-img {
+      width: 100%;
+      height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &-bottom {
+    background: url("../image/part_six1.png") no-repeat center;
+    background-size: 100% 100%;
+    margin-top: 0.2rem;
+    .open-title {
+      padding-top: 0.2rem;
+      padding-bottom: 0;
+    }
+    &-box {
+      display: flex;
+      padding-top: 0.2rem;
+      padding-bottom: 0.5rem;
+    }
+    &-warp {
+      flex: 1;
+      margin-right: 10px;
+      position: relative;
+      cursor: pointer;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background-color: rgba(@primary-color, 0.8);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        transition: 1s width;
+        border-radius: 5px;
+      }
+      &:hover::after {
+        width: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+      }
+    }
+  }
+}

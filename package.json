@@ -1,0 +1,80 @@
+{
+  "name": "ibax-official",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --open",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint": "yarn lint:js && yarn lint:style",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "8082"
+    }
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.5.0",
+    "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/babel-preset-app": "^0.8.0",
+    "@nuxtjs/google-gtag": "^1.0.4",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "add": "^2.0.6",
+    "ant-design-vue": "^1.6.5",
+    "js-cookie": "^2.2.1",
+    "nuxt": "^2.14.0",
+    "vue-gtag": "^1.10.0",
+    "vue-i18n": "^8.21.1",
+    "vuescroll": "^4.16.1",
+    "wowjs": "^1.1.3",
+    "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.3.0",
+    "@bazzite/nuxt-optimized-images": "^0.4.0",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "gifsicle": "^5.1.0",
+    "husky": "^4.2.5",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^26.1.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "lint-staged": "^10.2.11",
+    "mozjpeg": "^7.0.0",
+    "optipng-bin": "^7.0.0",
+    "pngquant-bin": "^6.0.0",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "vue-jest": "^3.0.4"
+  }
+}
