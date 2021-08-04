@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-16 15:19:11
  * @LastEditors: abc
- * @LastEditTime: 2021-08-04 15:31:05
+ * @LastEditTime: 2021-08-04 18:26:12
  * @Description: index
 -->
 <template>
@@ -176,7 +176,7 @@
                 <img :src="objCeo.img" alt="ceo-1" />
               </div>
               <div class="about-three-right-content">
-                <div class="about-three-right-top">
+                <div class="about-three-right-top" @click="handleModel(objCeo)">
                   <img :src="objCeo.card" alt="ceo-1" />
                 </div>
                 <div class="about-three-right-bottom">
@@ -303,6 +303,19 @@
         </a-col>
       </a-row>
     </div>
+    <a-modal
+      width="50%"
+      :visible="visible"
+      :closable="isClose"
+      :footer="null"
+      :after-close="handleClose"
+      :dialog-style="aboutModel"
+      @cancel="handleClose"
+    >
+      <div class="about-model">
+        <img :src="objCeo.card" alt="ceo-1" />
+      </div>
+    </a-modal>
   </div>
 </template>
 <script>
@@ -322,6 +335,11 @@ export default {
   },
   data() {
     return {
+      visible: false,
+      isClose: true,
+      aboutModel: {
+        padding: 0
+      },
       arrCeo: [
         {
           name: "Stuart Nichols (CEO)",
@@ -374,6 +392,17 @@ export default {
     clearTimeout(this.timer);
   },
   methods: {
+    handleModel(obj) {
+      this.visible = true;
+      console.log(obj);
+      clearTimeout(this.timer);
+    },
+    handleClose() {
+      this.visible = false;
+      setTimeout(() => {
+        this.handleLoop();
+      }, 1000);
+    },
     handleMouseenter(index) {
       clearTimeout(this.timer);
       this.arrCeo.map((item, i) => {

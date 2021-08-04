@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-18 10:39:20
  * @LastEditors: abc
- * @LastEditTime: 2021-01-16 11:48:17
+ * @LastEditTime: 2021-08-04 17:50:28
  * @Description: open Source
 -->
 <template>
@@ -38,7 +38,7 @@
           </a-row>
           <a-row type="flex" justify="center">
             <a
-              style="margin-top: 20px"
+              style="margin-top: 60px"
               href="https://github.com/ibax-io"
               target="_blank"
               class="link-a-white"

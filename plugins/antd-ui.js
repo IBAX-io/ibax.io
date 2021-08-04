@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-15 16:29:27
  * @LastEditors: abc
- * @LastEditTime: 2020-12-18 14:58:51
+ * @LastEditTime: 2021-08-04 17:55:51
  * @Description:
  */
 import Vue from "vue";
@@ -18,7 +18,8 @@ import {
   Spin,
   Button,
   Tabs,
-  Pagination
+  Pagination,
+  Modal
 } from "ant-design-vue";
 Vue.use(ConfigProvider); //
 Vue.use(Layout); //
@@ -32,3 +33,4 @@ Vue.use(Spin);
 Vue.use(Button); // button
 Vue.use(Tabs); // tabs
 Vue.use(Pagination); // pagination
+Vue.use(Modal);

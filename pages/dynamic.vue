@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-25 12:08:59
  * @LastEditors: abc
- * @LastEditTime: 2021-01-11 18:08:19
+ * @LastEditTime: 2021-08-04 17:46:40
  * @Description: 
 -->
 <template>
@@ -13,7 +13,9 @@
           <a-col :md="12" :xs="22">
             <p class="dynamic-text">{{ $t("declaration.communicate") }}</p>
             <p class="dynamic-text">{{ $t("declaration.collision") }}</p>
-            <p class="dynamic-text">{{ $t("declaration.please") }}</p>
+            <p class="dynamic-text" style="margin-bottom: 50px">
+              {{ $t("declaration.please") }}
+            </p>
             <a-row type="flex" justify="center">
               <nuxt-link :to="{ name: 'openSource' }" class="link-a-white">
                 Our Technologies >>

@@ -134,7 +134,7 @@
   "declaration.own": "4. Sub Nodes: store relevant data of their own physical ecoLib, built using the side chain concept",
   "declaration.ecological": "5. CLB is Cross Ledgers Base nodes outside IBAX Network operating as IBAX Network Oracles",
   "declaration.smart": "6. Smart Contract: the smart transaction processing mechanism",
-  "declaration.distributed": "7. Database: PGSQL, safe and efficient data storage",
+  "declaration.distributed": "7. Database: PostgreSQL, safe and efficient data storage",
   "declaration.unfairly": "He was unfairly treated by the official in the name of ",
   "declaration.management": "management. He was wronged and wanted to resist, ",
   "declaration.but": "but he had nothing to do.",
