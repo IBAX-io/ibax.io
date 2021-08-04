@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-15 16:29:27
  * @LastEditors: abc
- * @LastEditTime: 2021-07-30 16:23:17
+ * @LastEditTime: 2021-08-04 15:24:51
  * @Description: home web
 -->
 <template>
@@ -74,7 +74,6 @@
               webkit-playsinline="true"
               x5-playsinline="true"
               controls
-              muted
               playsinline="true"
               poster="/video/poster.jpg"
               class="video-content"

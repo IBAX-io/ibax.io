@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-16 15:19:11
  * @LastEditors: abc
- * @LastEditTime: 2021-08-04 10:55:41
+ * @LastEditTime: 2021-08-04 15:31:05
  * @Description: index
 -->
 <template>
@@ -164,7 +164,8 @@
                   :key="index"
                   class="about-three-tabs-box"
                   :class="item.isActive ? 'about-three-tabs-box-active' : ''"
-                  @click="handleActive(index)"
+                  @mouseenter="handleMouseenter(index)"
+                  @mouseleave="handleMouseLeave"
                 >
                   {{ item.name }}
                 </div>
@@ -373,7 +374,8 @@ export default {
     clearTimeout(this.timer);
   },
   methods: {
-    handleActive(index) {
+    handleMouseenter(index) {
+      clearTimeout(this.timer);
       this.arrCeo.map((item, i) => {
         item.isActive = false;
         if (index === i) {
@@ -403,13 +405,16 @@ export default {
       }
       this.i = index;
     },
+    handleMouseLeave() {
+      this.handleLoop();
+    },
     handleLoop() {
       if (this.i >= 2) {
         this.i = 0;
       } else {
         ++this.i;
       }
-      this.handleActive(this.i);
+      this.handleMouseenter(this.i);
       console.log(this.i);
       this.timer = setTimeout(() => {
         this.handleLoop();
