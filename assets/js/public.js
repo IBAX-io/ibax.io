@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description:
  * @Date: 2019-04-10 14:49:19
- * @LastEditTime: 2020-12-20 22:56:24
+ * @LastEditTime: 2021-08-04 10:38:43
  */
 import Cookie from "js-cookie";
 // translate router.meta.title, be used in breadcrumb sidebar tagsview
@@ -71,13 +71,15 @@ export function handleIsCheck(str, type) {
     },
     //
     emailPhone() {
-      const regText = /(^(((13[0-9])|(15[0-9])|(18[0-9]))\d{8})$)|(^[A-Za-z\d]+@([A-Za-z\d]+\.)(com|sina\.com|com\.cn|qq\.com|cn|net|net\.cn)$)/g;
+      const regText =
+        /(^(((13[0-9])|(15[0-9])|(18[0-9]))\d{8})$)|(^[A-Za-z\d]+@([A-Za-z\d]+\.)(com|sina\.com|com\.cn|qq\.com|cn|net|net\.cn)$)/g;
       const boo = regText.test(str);
       return boo;
     },
     //
     textEmailPhone() {
-      const regText = /(^(?!_)(?!.*?_$)[a-zA-Z0-9_\u4E00-\u9FA5]+$)|(^(((13[0-9])|(15[0-9])|(18[0-9]))\d{8})$)|(^[A-Za-z\d]+@([A-Za-z\d]+\.)(com|sina\.com|com\.cn|qq\.com|cn|net|net\.cn)$)/g;
+      const regText =
+        /(^(?!_)(?!.*?_$)[a-zA-Z0-9_\u4E00-\u9FA5]+$)|(^(((13[0-9])|(15[0-9])|(18[0-9]))\d{8})$)|(^[A-Za-z\d]+@([A-Za-z\d]+\.)(com|sina\.com|com\.cn|qq\.com|cn|net|net\.cn)$)/g;
       const boo = regText.test(str);
       return boo;
     },
@@ -94,13 +96,15 @@ export function handleIsCheck(str, type) {
     },
     //
     email() {
-      const regText = /^[A-Za-z\d]+@([A-Za-z\d]+\.)(com|sina\.com|com\.cn|qq\.com|cn|net|net\.cn)$/g;
+      const regText =
+        /^[A-Za-z\d]+@([A-Za-z\d]+\.)(com|sina\.com|com\.cn|qq\.com|cn|net|net\.cn)$/g;
       const boo = regText.test(str);
       return boo;
     },
     //
     password() {
-      const regText = /^(?![\d]+$)(?![a-zA-Z]+$)(?![!@#$%^&*]+$)[\da-zA-Z!@#$%^&*]{6,25}$/g;
+      const regText =
+        /^(?![\d]+$)(?![a-zA-Z]+$)(?![!@#$%^&*]+$)[\da-zA-Z!@#$%^&*]{6,25}$/g;
       const boo = regText.test(str);
       return boo;
     },
@@ -115,7 +119,8 @@ export function handleIsCheck(str, type) {
   return booResult || "";
 }
 export function validatePassword(str) {
-  const reg = /^(?![\d]+$)(?![a-zA-Z]+$)(?![!@#$%^&*]+$)[\da-zA-Z!@#$%^&*]{6,16}$/;
+  const reg =
+    /^(?![\d]+$)(?![a-zA-Z]+$)(?![!@#$%^&*]+$)[\da-zA-Z!@#$%^&*]{6,16}$/;
   return reg.test(str);
 }
 function hasClass(elements, cName) {

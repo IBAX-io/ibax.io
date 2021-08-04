@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-16 15:19:11
  * @LastEditors: abc
- * @LastEditTime: 2021-08-02 14:14:40
+ * @LastEditTime: 2021-08-04 10:55:41
  * @Description: index
 -->
 <template>
@@ -170,7 +170,7 @@
                 </div>
               </template>
             </div>
-            <div class="about-three-right">
+            <div class="about-three-right" style="margin-left: 8%">
               <div class="about-three-right-img" :style="objStyle">
                 <img :src="objCeo.img" alt="ceo-1" />
               </div>
@@ -324,21 +324,21 @@ export default {
       arrCeo: [
         {
           name: "Stuart Nichols (CEO)",
-          card: require("../assets/image/ceo-2-1.jpg"),
+          card: require("../assets/image/ceo-1-1.png"),
           img: require("../assets/image/ceo-1.png"),
           text: this.$t("stuart"),
           isActive: true
         },
         {
           name: "Alan McIvor (COO)",
-          card: require("../assets/image/ceo-2-1.jpg"),
+          card: require("../assets/image/ceo-2-1.png"),
           img: require("../assets/image/ceo-2.png"),
           text: this.$t("alan"),
           isActive: false
         },
         {
           name: "Simon Hemmrich (Senior Consultant)",
-          card: require("../assets/image/ceo-2-1.jpg"),
+          card: require("../assets/image/ceo-3-1.png"),
           img: require("../assets/image/ceo-3.png"),
           text: this.$t("simon"),
           isActive: false
@@ -346,7 +346,7 @@ export default {
       ],
       objCeo: {
         name: "XXX（CEO）",
-        card: require("../assets/image/ceo-2-1.jpg"),
+        card: require("../assets/image/ceo-1-1.png"),
         img: require("../assets/image/ceo-1.png"),
         text: this.$t("stuart"),
         isActive: true
@@ -354,7 +354,7 @@ export default {
       objStyle: {
         width: "400px",
         marginTop: "95px",
-        marginRight: "-5px"
+        marginRight: "-15px"
       },
       timer: null,
       i: 0
@@ -386,7 +386,7 @@ export default {
         this.objStyle = {
           width: "400px",
           marginTop: "95px",
-          marginRight: "-5px"
+          marginRight: "-15px"
         };
       } else if (index === 1) {
         this.objStyle = {
