@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-09-16 15:19:11
  * @LastEditors: abc
- * @LastEditTime: 2021-08-04 18:26:12
+ * @LastEditTime: 2021-08-05 10:08:52
  * @Description: index
 -->
 <template>
@@ -156,7 +156,11 @@
     <div class="about-three">
       <a-row type="flex" justify="center">
         <a-col :md="15" :xs="23">
-          <div class="about-three-content">
+          <div
+            class="about-three-content"
+            @mouseenter="handleMouseenter"
+            @mouseleave="handleMouseLeave"
+          >
             <div class="about-three-tabs">
               <h4 class="about-three-title">Core team members</h4>
               <template v-for="(item, index) in arrCeo">
@@ -164,8 +168,7 @@
                   :key="index"
                   class="about-three-tabs-box"
                   :class="item.isActive ? 'about-three-tabs-box-active' : ''"
-                  @mouseenter="handleMouseenter(index)"
-                  @mouseleave="handleMouseLeave"
+                  @click="handleSelect(index)"
                 >
                   {{ item.name }}
                 </div>
@@ -176,7 +179,10 @@
                 <img :src="objCeo.img" alt="ceo-1" />
               </div>
               <div class="about-three-right-content">
-                <div class="about-three-right-top" @click="handleModel(objCeo)">
+                <div
+                  class="about-three-right-top"
+                  @mouseenter="handleModel(objCeo)"
+                >
                   <img :src="objCeo.card" alt="ceo-1" />
                 </div>
                 <div class="about-three-right-bottom">
@@ -399,12 +405,12 @@ export default {
     },
     handleClose() {
       this.visible = false;
-      setTimeout(() => {
-        this.handleLoop();
-      }, 1000);
     },
-    handleMouseenter(index) {
+    handleSelect(index) {
       clearTimeout(this.timer);
+      this.handleActive(index);
+    },
+    handleActive(index) {
       this.arrCeo.map((item, i) => {
         item.isActive = false;
         if (index === i) {
@@ -435,7 +441,13 @@ export default {
       this.i = index;
     },
     handleMouseLeave() {
-      this.handleLoop();
+      setTimeout(() => {
+        this.handleLoop();
+      }, 5000);
+    },
+    handleMouseenter() {
+      clearTimeout(this.timer);
+      this.handleActive(this.i);
     },
     handleLoop() {
       if (this.i >= 2) {
@@ -443,7 +455,7 @@ export default {
       } else {
         ++this.i;
       }
-      this.handleMouseenter(this.i);
+      this.handleActive(this.i);
       console.log(this.i);
       this.timer = setTimeout(() => {
         this.handleLoop();
